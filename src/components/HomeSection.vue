@@ -9,13 +9,16 @@
       <img class="home__img-grass" src="../assets/grass.png"/>
       <h1>Welcome!</h1>
     </section>
+    <AboutSection/>
   </div>
 </template>
 <script>
+import AboutSection from '@/components/AboutSection.vue'
 import NavBar from '@/components/NavBar.vue'
 
 export default {
     components: {
+        AboutSection,
         NavBar
     },
     name: 'HomeSection'
