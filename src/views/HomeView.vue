@@ -1,25 +1,10 @@
 <template>
   <div class="home">
-    <ul uk-accordion>
-    <li class="uk-open">
-        <a class="uk-accordion-title" href="#">Item 1</a>
-        <div class="uk-accordion-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-    </li>
-    <li>
-        <a class="uk-accordion-title" href="#">Item 2</a>
-        <div class="uk-accordion-content">
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
-        </div>
-    </li>
-    <li>
-        <a class="uk-accordion-title" href="#">Item 3</a>
-        <div class="uk-accordion-content">
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
-        </div>
-    </li>
-  </ul>
+    <section class="home__section">
+      <img class="home__img-mountains" src="../assets/mountains.png"/>
+      <img class="home__img-grass" src="../assets/grass.png"/>
+      <h1>Welcome!</h1>
+    </section>
   </div>
 </template>
 
@@ -33,3 +18,39 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.home {
+
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 0.625rem;
+
+  &__section {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: -1;
+  }
+
+  &__img-mountains {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__img-grass {
+    position: absolute;
+    bottom: 0;
+  }
+    
+}
+
+</style>
+
