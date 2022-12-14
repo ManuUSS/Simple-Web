@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+    <NavBar/>
     <section class="home__section">
       <img class="home__img-background" src="../assets/bg.png"/> 
       <img class="home__img-mountains3" src="../assets/mt3.png"/>
@@ -11,7 +12,12 @@
   </div>
 </template>
 <script>
+import NavBar from '@/components/NavBar.vue'
+
 export default {
+    components: {
+        NavBar
+    },
     name: 'HomeSection'
 }
 </script>
